@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayuda - Parost</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-container">
+      <div class="brand">
+        <button class="mobile-menu-btn" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <img src="assets/images/logo.png" alt="Parost Logo" class="logo-icon">
+        <span class="app-name">Parost</span>
+      </div>
+      <div class="lang-selector custom-dropdown">
+        <button class="dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+          <span>Español</span>
+        </button>
+        <ul class="dropdown-menu" role="listbox">
+          <li role="option" aria-selected="true" data-value="es">Español</li>
+          <li role="option" aria-selected="false" data-value="en">English</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="layout-wrapper">
+    <main class="container">
+      <!-- HEADER -->
+      <header class="header">
+        <h1>Ayuda</h1>
+      </header>
+
+      <div class="intro" style="color: var(--text-primary);">
+        Contacta con nuestro equipo a través del formulario o escribe a <strong>developer@idvia.es</strong>. Te contestaremos lo antes posible.
+      </div>
+
+      <div class="content">
+        <section id="contacto" class="section">
+          <h2>Contacto</h2>
+          
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" placeholder="Tu nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Asunto</label>
+                <input type="text" id="subject" placeholder="Asunto de tu mensaje" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" placeholder="¿En qué te podemos ayudar?" required></textarea>
+            </div>
+            
+            <button type="submit">Enviar mensaje</button>
+          </form>
+        </section>
+
+        <section id="faqs" class="section">
+          <h2>Preguntas Frecuentes</h2>
+          
+          <div class="faq-accordion">
+            <details class="faq-item">
+              <summary>
+                <span>¿Qué significan los colores de las alertas?</span>
+                <span class="icon">+</span>
+              </summary>
+              <div class="faq-content">
+                <p>El color rojo indica una alerta Excesiva: la vibración ha superado el umbral crítico de 1.5g.</p>
+                <p>El color neutro significa que el estado es Aceptable y los niveles se mantienen por debajo del umbral de riesgo.</p>
+              </div>
+            </details>
+            
+            <details class="faq-item">
+              <summary>
+                <span>¿Cómo funcionan los sensores de los puentes?</span>
+                <span class="icon">+</span>
+              </summary>
+              <div class="faq-content">
+                <p>Los sensores recogen datos en tiempo real sobre la vibración. Esta información se procesa automáticamente para generar las alertas en tu panel.</p>
+              </div>
+            </details>
+            
+            <details class="faq-item">
+              <summary>
+                <span>¿Cómo recibo notificaciones de alerta en el Apple Watch?</span>
+                <span class="icon">+</span>
+              </summary>
+              <div class="faq-content">
+                <p>Tu Apple Watch está sincronizado para avisarte de cualquier anomalía estructural detectada por los sensores.</p>
+              </div>
+            </details>
+            
+            <details class="faq-item">
+              <summary>
+                <span>¿Puedo consultar datos sin conexión?</span>
+                <span class="icon">+</span>
+              </summary>
+              <div class="faq-content">
+                <p>Tanto la visualización en tiempo real como la sincronización de alertas requieren conexión a internet.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      <h3>Ayuda</h3>
+      <nav class="toc">
+        <a href="#contacto">Contacto</a>
+        <a href="#faqs">Preguntas Frecuentes</a>
+      </nav>
+      <h3 style="margin-top: 40px; font-size: 15px;">Más información</h3>
+      <nav class="toc">
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="terminos.html">Términos y condiciones</a>
+        <a href="ayuda.html">Ayuda</a>
+      </nav>
+    </aside>
+  </div>
+
+  
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/mobile-menu.js"></script>
+</body>
+</html>
+
+
+
+
