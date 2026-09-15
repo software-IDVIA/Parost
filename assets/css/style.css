@@ -250,7 +250,14 @@
       background: rgba(0,0,0,0.4);
       z-index: 99;
       opacity: 0;
-      transition: opacity 0.3s ease;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+    }
+    
+    body.menu-open {
+      overflow: hidden;
     }
 
     /* Mobile layout */
@@ -295,6 +302,7 @@
       
       .sidebar-overlay.open {
         opacity: 1;
+        visibility: visible;
         pointer-events: auto;
       }
     }

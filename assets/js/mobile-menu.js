@@ -13,11 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuBtn.addEventListener('click', () => {
       sidebar.classList.toggle('open');
       sidebarOverlay.classList.toggle('open');
+      document.body.classList.toggle('menu-open');
     });
 
     sidebarOverlay.addEventListener('click', () => {
       sidebar.classList.remove('open');
       sidebarOverlay.classList.remove('open');
+      document.body.classList.remove('menu-open');
     });
     
     const tocLinks = sidebar.querySelectorAll('.toc a');
@@ -25,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         sidebar.classList.remove('open');
         sidebarOverlay.classList.remove('open');
+        document.body.classList.remove('menu-open');
       });
     });
   }
