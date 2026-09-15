@@ -257,11 +257,7 @@
     }
     
     body.menu-open {
-      /* Remove overflow hidden to let it scroll natively */
-    }
-    
-    body.menu-open .container {
-      display: none;
+      overflow: hidden;
     }
     
     /* Mobile layout */
@@ -280,19 +276,21 @@
       }
       
       .sidebar {
-        position: absolute;
-        top: 60px; /* start below the fixed top-nav */
-        bottom: auto;
-        left: -100%;
-        width: 100%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -320px;
+        width: 300px;
         height: auto;
-        min-height: calc(100vh - 60px);
+        max-height: none;
         background: var(--card-bg);
         z-index: 100;
-        padding: 40px 20px 100px;
+        padding: 80px 20px 100px;
         margin: 0;
+        box-shadow: 2px 0 12px rgba(0,0,0,0.1);
         transition: left 0.3s ease;
-        overflow-y: visible;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
       }
       
       .sidebar.open {
@@ -604,7 +602,7 @@
     /* Mobile */
     @media (max-width: 600px) {
       body {
-        padding: 16px 12px;
+        padding: 60px 12px 16px;
         background: var(--card-bg);
       }
       
